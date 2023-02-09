@@ -13,10 +13,10 @@
   font-weight: 500;
   border: none;
   padding: 4px 10px;
-  margin-top: -50px;
+  margin-top: 20px;
+
 
   &:hover {
-    cursor: pointer;
     filter: brightness(0.9);
   }
 
@@ -39,6 +39,8 @@
   &.bBlack {
     background-color: $black17;
     color: white;
+    cursor: pointer;
+
     &:hover {
       filter: none;
       background-color: black;
