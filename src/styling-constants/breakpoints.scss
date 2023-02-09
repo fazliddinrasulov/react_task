@@ -1,0 +1,18 @@
+$breakpoints: (
+    xs: 335,
+    sm: 600,
+    md: 700,
+    lg: 900,
+    xl: 1004,
+    xxl: 1250,
+    xxxl: 1440,
+    fhd: 1921,
+);
+
+:export {
+    @each $name, $breakpoint in $breakpoints {
+        #{$name}: #{$breakpoint};
+    }
+}
+
+$tablet: 768px;

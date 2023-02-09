@@ -1,0 +1,53 @@
+@import "../../styling-constants/colors.scss";
+
+.myButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50px;
+  width: clamp(100px, 250px, 100%);
+  max-width: 100%;
+  min-width: 100px;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  padding: 4px 10px;
+  margin-top: -50px;
+
+  &:hover {
+    cursor: pointer;
+    filter: brightness(0.9);
+  }
+
+  &.bGray {
+    background-color: $gray100;
+    color: $gray400;
+  }
+
+  &.bGray2 {
+    background-color: $gray100;
+    color: white;
+    font-weight: 600;
+  }
+
+  &.bLightGray {
+    background-color: $lightGray;
+    color: black;
+  }
+
+  &.bBlack {
+    background-color: $black17;
+    color: white;
+    &:hover {
+      filter: none;
+      background-color: black;
+    }
+  }
+
+  &.bBlue {
+    background-color: $blue500;
+    color: white;
+    font-weight: 600;
+  }
+}

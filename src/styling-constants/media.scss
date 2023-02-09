@@ -1,0 +1,54 @@
+@import "./breakpoints.scss";
+
+@mixin media($name)  {
+    $width: map-get($breakpoints, $name);
+
+    @if $width {
+        @media screen and (min-width: #{$width}px) {
+            @content;
+        }
+    } @else {
+        @content;
+    }
+}
+
+@mixin media-max($name) {
+    $width: map-get($breakpoints, $name);
+
+    @if $width {
+        @media screen and (max-width: #{$width - 1}px) {
+            @content;
+        }
+    } @else {
+        @content;
+    }
+}
+@mixin media-h($name)  {
+    $height: map-get($breakpoints, $name);
+
+    @if $height {
+        @media screen and (min-height: #{$height}px) {
+            @content;
+        }
+    } @else {
+        @content;
+    }
+}
+
+@mixin media-h-max($name) {
+    $height: map-get($breakpoints, $name);
+
+    @if $height {
+        @media screen and (max-height: #{$height - 1}px) {
+            @content;
+        }
+    } @else {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: $tablet) {
+        @content;
+    }
+}

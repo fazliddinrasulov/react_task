@@ -1,0 +1,191 @@
+@import "../../styling-constants/colors.scss";
+@import "../../styling-constants/coolEffects.scss";
+@import "../../styling-constants/media.scss";
+
+.taskHistPage {
+  min-height: 100%;
+  position: relative;
+  padding-top: 45px;
+  padding-bottom: 45px;
+  padding-left: clamp(16px, calc(8% - 22px), 90px);
+  padding-right: clamp(16px, calc(8% - 22px), 90px);
+  background-color: $coolBack;
+
+  .pageTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 32px;
+  }
+
+  .metaInfo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 24px;
+    row-gap: 28px;
+    margin-bottom: 38px;
+    font-size: 1rem;
+
+    .customerAccounts {
+      margin-right: 24px;
+      .title {
+        margin-right: 8px;
+      }
+
+      .indicator {
+        padding: 4px 14px;
+        border-radius: 6px;
+        background-color: $gray200;
+      }
+    }
+
+    .branch {
+      .title {
+        margin-right: 8px;
+      }
+
+      .indicator {
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: $gray200;
+      }
+    }
+
+    .branchDrop {
+      min-width: 200px;
+
+      .headOfDrop {
+        min-width: 200px;
+      }
+
+      .title {
+        margin-right: 8px;
+      }
+
+      .accountSelectDropdown {
+        display: inline-flex;
+
+        .headOfDrop {
+          @include media-max("sm") {
+            min-width: 180px;
+            max-width: 180px;
+          }
+        }
+
+        .branchChoice {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .task {
+    position: relative;
+
+    .statusDataWrap {
+      max-width: 100%;
+      min-width: 102px; // for 'en' language
+      overflow-wrap: anywhere;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1rem;
+      min-height: 28px;
+      border-radius: 20px;
+      padding-left: 10px;
+      padding-right: 10px;
+
+      &.ka {
+        min-width: 140px;
+      }
+
+      &.completed {
+        background-color: $lightGreen;
+        color: $darkGreen;
+      }
+
+      &.open {
+        background-color: $blue3;
+        color: $blue2;
+      }
+    }
+  }
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: $black;
+  margin-right: 5px;
+}
+
+.nameField {
+  display: flex;
+  align-items: center;
+
+}
+
+.narrowRowTopBoxContent {
+  .orderNumber {
+    font-size: 20px;
+    color: black;
+  }
+}
+
+.narrowBottomBoxContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  color: $blue500;
+  .preview {
+    padding: 3px 6px;
+    border-radius: 6px;
+    &:hover {
+      cursor: pointer;
+      box-shadow: $coolBlueShadow;
+    }
+  }
+
+  .download {
+    padding: 3px 6px;
+    border-radius: 6px;
+    &:hover {
+      cursor: pointer;
+      box-shadow: $coolBlueShadow;
+    }
+  }
+}
+
+.downloadIconWrap {
+  width: 28px;
+  height: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 6px;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: $coolBlueShadow;
+  }
+}
+
+.eyeIconWrap {
+  width: 28px;
+  height: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 6px;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: $coolBlueShadow;
+  }
+}
